@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport" />
+ 
+  <link rel="icon" href="/favicon.svg" type="image/x-icon"> 
+  
+  <title>微圈 WeClose Demo</title>
+
+  <!-- 预连接接口域名 -->
+  <link href="http://api-love-dev-zxm.qingteng-inc.com:6190/api/" rel="preconnect" />
+
+  
+  <link href="https://fe-center.afunapp.com" rel="preconnect" />
+  
+
+  <!-- pre-loading -->
+  
+  <script>
+    try {
+      window.__build_inject_var__ = {
+        buildInfo: JSON.parse('{"isWeplay":false,"buildMode":"source","env":"beta","apiDomain":"http://api-love-dev-zxm.qingteng-inc.com:6190/api/","version":"6d92c9182b58249ad312d3fbcb2b8fdfb136e9b7","pageCenterId":"KqpfZTtS","buildTime":"2025/08/12 19:19:09"}')
+      };
+    } catch (err) {
+      console.warn(err);
+    }
+  </script>
+
+  
+  <script>
+    try {
+      const fullAppConfig = JSON.parse('');
+      const region = new URLSearchParams(window.location.search).get('region');
+      window.__inline_app_config = fullAppConfig[region];
+    } catch (err) {
+      console.warn(err);
+    }
+  </script>
+  
+
+  <script>
+    try {
+      window.__build_inject_var__ = window.__build_inject_var__ || {};
+      window.__build_inject_var__.pageCenterData = null;
+    } catch (err) {
+      console.warn(err);
+    }
+  </script>
+
+  <script>!function(){"use strict";function e(e,n){if(!(e instanceof n))throw TypeError("Cannot call a class as a function")}function n(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function t(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}function r(e,n,t){return n in e?Object.defineProperty(e,n,{value:t,enumerable:!0,configurable:!0,writable:!0}):e[n]=t,e}var o=function(){return window.__build_inject_var__.buildInfo.isWeplay},i={WP:["weplayapp.com","wejoysg.com"],HW:["afunapp.com"]},a=function(){var e=o()?i.WP:i.HW,n=window.location.origin;return!e.some(function(e){return n.includes(e)})},c=window.location.host,s=c.includes("dev"),u=c.includes("pre"),d=c.includes("beta"),l=!s&&!u&&!d&&!a(),f=new URL(window.location.href),p=function(e){return f.searchParams.get(e)},g=p("region")||(o()?"C":"HW"),v=navigator.userAgent,m=p("debug"),h=["Weplay","Wespy","JuHuiwan","LiveChat","VendingMachine","Huiwan","Jackaroo"].map(function(e){var n=v.match(new RegExp("".concat(e,".*/(.*)")));return n?{name:e,version:n[1]}:null}).filter(Boolean)[0];h&&h.name;var w=!!(h?h.version:""),y=/HarmonyOS/.test(v),_=/android/i.test(v);/iPhone|iPad|iPod/i.test(v);var I=f.searchParams.get("act_id"),b=new(function(){function n(){e(this,n),r(this,"initJSBPromise",null);try{this.initJSBPromise=this.initWebViewJavascriptBridge()}catch(e){console.error("WebViewJavascriptBridge init error: ".concat(e))}}return t(n,[{key:"initWebViewJavascriptBridge",value:function(){return new Promise(function(e){if(!w)return e();var n=window,t=n.WebViewJavascriptBridge,r=n.WVJBCallbacks,o=n.AndroidJsBridge;if(t||y)return e();if(r)return r.push(e);window.WVJBCallbacks=[e];var i=document.createElement("iframe");i.style.display="none",i.src="wvjbscheme://__BRIDGE_LOADED__",document.documentElement.appendChild(i),setTimeout(function(){document.documentElement.removeChild(i)},0),_&&o&&o.onJsBridge("wvjbscheme://__BRIDGE_LOADED__")})}},{key:"handler",value:function(e,n){var t=this;return new Promise(function(r,o){t.initJSBPromise.then(function(){try{(window.WebViewJavascriptBridge&&window.WebViewJavascriptBridge.callHandler||function(){})(e,function(e){return r(function(e){for(;"string"==typeof e;)try{e=JSON.parse(e)}catch(n){return{data:e,msg:"Not standard JSON string"}}return e}(decodeURIComponent(e)))})}catch(t){y?r({}):o({code:2e3,msg:"sdk error!",data:{method:e,params:n}})}})})}}]),n}());function S(e){for(var n=1;n<arguments.length;n++){var t=null!=arguments[n]?arguments[n]:{},o=Object.keys(t);"function"==typeof Object.getOwnPropertySymbols&&(o=o.concat(Object.getOwnPropertySymbols(t).filter(function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable}))),o.forEach(function(n){r(e,n,t[n])})}return e}var k=new(function(){function n(){e(this,n),r(this,"initUserInfoPromise",null),r(this,"userInfo",{}),r(this,"thinkingDataInfo",null);try{this.initUserInfoPromise=this.initUserInfo()}catch(e){console.error("initUserInfo error: ".concat(e))}}return t(n,[{key:"initUserInfo",value:function(){var e=this;return new Promise(function(n){var t,r;e.getCachedThinkingDataInfo(),e.userInfo.uid=null===(t=e.thinkingDataInfo)||void 0===t?void 0:t.uid,e.userInfo.deviceId=null===(r=e.thinkingDataInfo)||void 0===r?void 0:r.deviceId,w?b.handler("getUserInfo").then(function(t){e.userInfo=t,n(e.userInfo)}).catch(function(t){console.error("getUserInfo error: ".concat(t)),n(e.userInfo)}):(e.userInfo.uid=p("u"),n(e.userInfo))})}},{key:"getCachedThinkingDataInfo",value:function(){try{var e=localStorage.getItem("ThinkingDataJSSDK_cross");if(e){var n=JSON.parse(e);this.thinkingDataInfo=S({uid:n.account_id,deviceId:n.device_id||n.distinct_id},n)}}catch(e){console.warn("getCachedUserInfo error: ".concat(e))}}},{key:"getUserInfoAsync",value:function(){return this.initUserInfoPromise}},{key:"getUserInfo",value:function(){return this.userInfo}},{key:"getThinkingDataInfo",value:function(){var e;return null!==(e=this.thinkingDataInfo)&&void 0!==e?e:{}}}]),n}()),L=window.__inline_app_config,O=function(e){var n=L.point,t=n.serverUrl+"/sync_data",r=new XMLHttpRequest;r.open("POST",t,!0),r.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),r.onreadystatechange=function(){4===r.readyState&&200!==r.status&&console.warn("Network response was not ok.")},r.send("appid=".concat(n.appId,"&data=").concat(encodeURIComponent(JSON.stringify(e)),"&debug=1"))};function P(e,n){return n=null!=n?n:{},Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):(function(e,n){var t=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t.push.apply(t,r)}return t})(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))}),e}var E=function(e){var n,t,r,o=(null!==(t=null==L?void 0:null===(n=L.request)||void 0===n?void 0:n.h1)&&void 0!==t?t:"")+"/activity_v2/common/front_log_v2",i=new XMLHttpRequest;i.open("POST",o,!0),i.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),i.onreadystatechange=function(){4===i.readyState&&200!==i.status&&console.warn("Network response was not ok.")};var a=k.getUserInfo(),c=Object.keys(e=S({uid:a.uid,sid:null!==(r=a.sid)&&void 0!==r?r:"",act_id:I},e)).map(function(n){return n+"="+encodeURIComponent(e[n])}).join("&");i.send(c)},j=new(function(){function n(){e(this,n),r(this,"traceId",""),this.traceId=this.getTraceId()}return t(n,[{key:"reportSLSLog",value:function(){var e=this,n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{event_name:"",msg:"",event_type:""};try{if(a()&&!m)return;k.getUserInfoAsync().then(function(t){if((!t.sid||!t.uid||!I)&&!m){console.error("report log: userInfo is empty, ".concat(I));return}var r=k.getThinkingDataInfo(),o="ios";_&&(o="android"),y&&(o="harmony");var i=S({act_id:I,url:window.location.href,appVersion:r.appVersion,platform:o,region:g,uid:t.uid,ua:v,trace_id:e.traceId,device_id:r.deviceId,event_time:Date.now(),event_duration:parseInt(performance.now())},n);E({msg:JSON.stringify(i)})})}catch(e){console.error("reportSLSLog error: ".concat(e))}}},{key:"reportError",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{event_name:""};this.reportSLSLog(P(S({},e),{event_type:"error"}))}},{key:"reportPageLifeCycle",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{event_name:""},n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{};performance.now()>5e3&&(navigator.connection&&(e.msg=S({networkType:navigator.connection.effectiveType,downlink:navigator.connection.downlink,isOnline:window.navigator.onLine,rtt:navigator.connection.rtt},n),console.debug("ywtest ~ sls.js ~ SLS ~ reportPageLifeCycle ~ params:",e)),this.reportSLSLog(P(S({},e),{event_name:e.event_name||"LoadPage",event_type:"pageLifeCycle"})))}},{key:"getTraceId",value:function(){return this.traceId?this.traceId:Date.now().toString(36)+Math.random().toString(36).substr(2,5)}}]),n}());function D(e){var n,t,r,o,i,a,c,s,u=k.getUserInfo(),d=k.getThinkingDataInfo();O({"#account_id":u.uid||"","#distinct_id":d.deviceId||"undefined","#type":"track","#time":(t=(n=new Date).getFullYear(),r=n.getMonth()+1,o=n.getDate(),i=n.getHours(),a=n.getMinutes(),c=n.getSeconds(),s=n.getMilliseconds(),r=r<10?"0"+r:r,o=o<10?"0"+o:o,i=i<10?"0"+i:i,a=a<10?"0"+a:a,c=c<10?"0"+c:c,"".concat(t,"-").concat(r,"-").concat(o," ").concat(i,":").concat(a,":").concat(c,".").concat(s<10?"00"+s:s<100?"0"+s:s)),"#event_name":"LoadPage",properties:{"#lib":"LogBus","#lib_version":"2.0.1",user_id:k.uid||"",uid:k.uid||"",scene:e?"HTML_SECOND":"HTML",event_duration:Math.floor(performance.now()),url:window.location.href,region:g,act_id:I,url_path:window.location.pathname,originLanguage:"zh-CN"}})}window.$sls=j;var J=function(e){try{if("V"!==g)return;var n=[];window.performance&&["script","css","xmlhttprequest","fetch","img"].includes(e.initiatorType)&&e.name.includes("weplayapp")&&!["https://fe-center.weplayapp.com/page-center/assets/E20Ly6E3/GiKfaIu0.svg","https://weplay-pagespy.weplayapp.com/page-spy/index.min.js"].includes(e.name)&&(console.error("越南服，不合法的url 有问题找杨晓哲:",e.name),n.push(e.name)),l&&n.length&&j.reportError({msg:{urls:n.join(",")},event_name:"V Illegal URL"})}catch(e){console.error("judgmentVUrlLegitimacy error ".concat(e))}},U={JS:"js",RS:"resource",CS:"cors"},C=function(e){return e instanceof ErrorEvent?"Script error."===e.message?U.CS:U.JS:U.RS};!function(){try{!function(){try{var e,n,t,r,o,i,a;e=function(e){if(C(e)===U.JS){var n,t={message:e.message,stack:null===(n=e.error)||void 0===n?void 0:n.stack,filename:e.filename,colno:e.colno,lineno:e.lineno,error_name:e.error&&e.error.name||"UnKnown"};j.reportError({msg:t,event_name:"Window Js Error"})}},window.addEventListener("error",function(n){return e(n)},!0),n=function(e){if(C(e)===U.RS){var n=e.target,t={url:n.src||n.href,tagName:n.tagName};j.reportError({msg:t,event_name:"Resource Error"})}},window.addEventListener("error",function(e){return n(e)},!0),t=0,r="activity_v2/common/front_log_v2",o=["think-client.weplayapp.com","think-client.jackarooapp.com","think.afunapp.com"],i=window.XMLHttpRequest,window.XMLHttpRequest=function(){var e=new i,n=e.open,a=e.send;return e.open=function(i,a,c){var s=this;this.logData={url:a,method:i,async:c};var u=function(e){if(!o.some(function(e){return a.includes(e)})){var n=JSON.stringify(S({name:e,readyState:s.readyState},s.logData));(!a.includes(r)||!(t>1))&&(j.reportError({msg:n,event_name:"XHR Error"}),a.includes(r)&&t++)}};this.addEventListener("error",function(){u("error")}),this.addEventListener("abort",function(){u("abort")}),this.addEventListener("timeout",function(){u("timeout")}),n.apply(e,arguments)},e.send=function(){a.apply(e,arguments)},e},a=window.fetch,window.fetch=function(e,n){return a(e,n).catch(function(t){var r=JSON.stringify({message:t.message,url:e,options:n});j.reportError({msg:r,event_name:"Fetch Error"})})}}catch(e){console.error("errorLogMain ".concat(e))}}(),function(){try{(w||m)&&(D(!1),k.getUserInfoAsync().then(function(){var e,n;D(!0),null==j||j.reportPageLifeCycle({event_name:"LoadPage"}),e=k.getUserInfo(),n=k.getThinkingDataInfo(),b.handler("dataTrack",JSON.stringify({event_name:"LoadPage",event_params:{scene:"JSB",event_duration:Math.floor(performance.now()),url:window.location.href,url_path:window.location.pathname,region:g,nickname:e.nickname,deviceId:n.deviceId,uid:e.uid}}))}))}catch(e){console.error(e)}}(),function(){try{(function(){try{var e=o()?i.HW:i.WP;new PerformanceObserver(function(n){n.getEntries().forEach(function(n){"resource"===n.entryType&&(J(n),function(e,n){try{var t=[];n.forEach(function(n){e.name.includes(n)&&(console.error("包含".concat(n,"，域名不合法，需更换url"),e.name),t.push(e.name))}),l&&t.length&&j.reportError({msg:{urls:t.join(",")},event_name:"Illegal URL"})}catch(e){console.error("judgementWPResourceLegitimacy error ".concat(e))}}(n,e))})}).observe({entryTypes:["resource"]})}catch(e){console.error("judgementResourceLegitimacy error ".concat(e))}})()}catch(e){console.error("resourceLogMain error ".concat(e))}}()}catch(e){console.error("\uD83D\uDE80yxz test ~ inline script error:",e)}}()}();</script>
+
+  <script>
+    try {
+      main();
+    } catch (err) {
+      console.error(err);
+    }
+
+    function main() {
+      var startTime = performance.now();
+
+      if (location.href.includes("region=V")) {
+        // 越南服不接口预加载
+        return;
+      }
+
+      setTimeout(function() {
+        console.warn("ywtest inline in html startTime", startTime);
+      }, 3000);
+
+      var buildInfo = window.__build_inject_var__.buildInfo;
+
+      getPageCenterData(buildInfo.pageCenterId, buildInfo.env, function(data) {
+        if (!data) {
+          console.warn("ywtest ~ in html inline js, getPageCenterData !data === true");
+        }
+        // p0 图片加载
+        try {
+          const pageCenterData = JSON.parse(data);
+          const p0Assets = pageCenterData.config.assets.filter((item) => item.describe?.includes('p0'))
+          p0Assets.forEach((item) => {
+            const image = new Image()
+            image.src = item.value
+          })
+        }catch(err){
+          console.warn('p0Assets', err)
+        } 
+
+        window.__build_inject_var__.pageCenterData = JSON.parse(data);
+        console.warn("ywtest ~ window.__build_inject_var__.pageCenterData:", performance.now(), window.__build_inject_var__.pageCenterData);
+      });
+    }
+
+    function getPageCenterData(id, env, cb) {
+      if (!id) {
+        console.warn("ywtest ~ getPageCenterData failed ~ id:", id);
+        return;
+      }
+
+      var isProduction = env === "production";
+      var LOCAL = env === "dev";
+      var IS_DEV = env === "development";
+
+      var debugPCEnv = location.search.includes("debugPCEnv=dev");
+      // var isWeplay = location.hostname.includes("weplayapp.com");
+      // JK服有独立的域名
+      var isWeplay = location.hostname.includes("weplayapp.com") || location.hostname.includes("jackarooapp.com")
+      console.log('isWeplayOrJk', isWeplay)
+
+      var cdnUrl = `https://fe-center.${isWeplay ? "weplayapp" : "afunapp"}.com/page-center/release/${id}${IS_DEV || (debugPCEnv === "dev" && !isProduction) ? "_dev" : ""}.json?v=${Date.now()}`;
+
+      var url = LOCAL ? `https://page-center-api-activity.wepieoa.com/open/release?id=${id}` : cdnUrl;
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.open("GET", url, true);
+      xhr.send();
+
+      xhr.onreadystatechange = function(e) {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          cb(xhr.responseText);
+        }
+      };
+    }
+  </script>
+  <link href="/css/daa78f6a.css" rel="stylesheet">
+</head>
+
+<body class="loading">
+  <noscript>
+    <strong>We're sorry but doesn't work properly without JavaScript enabled.
+      Please enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+
+  <script defer src="/js/lib-polyfill.8d2834f8.js"></script><script defer src="/js/lib-vue.938c809b.js"></script><script defer src="/js/lib-axios.2a8f2df8.js"></script><script defer src="/js/lib-router.0a33f35d.js"></script><script src="/js/chunk-lodash.37894f24.js"></script><script src="/js/chunk-activity-libs.0262d46d.js"></script><script src="/js/666.109ee523.js"></script><script src="/js/chunk-core.cf7bae8e.js"></script><script src="/js/index.c4063328.js"></script>
+</body>
+</html>
